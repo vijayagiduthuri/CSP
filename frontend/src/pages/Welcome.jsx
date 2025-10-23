@@ -29,7 +29,7 @@ export default function Home() {
     confirmPassword: "",
   });
 
-  const API_BASE_URL = "http://localhost:9000/api/users";
+  const API_BASE_URL = "https://csp-7ud9.onrender.com/api/users";
 
   const handleLoginChange = (e) =>
     setLoginData({ ...loginData, [e.target.name]: e.target.value });

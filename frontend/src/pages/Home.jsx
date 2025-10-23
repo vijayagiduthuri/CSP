@@ -11,7 +11,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   const loggedInUser = JSON.parse(sessionStorage.getItem("user"));
-  const API_BASE_URL = "http://localhost:9000/api/complaints";
+  const API_BASE_URL = "https://csp-7ud9.onrender.com/api/complaints";
 
   // Fetch complaints for logged-in user
   const fetchComplaints = async () => {

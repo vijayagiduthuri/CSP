@@ -9,7 +9,7 @@ export default function AdminLoginModal({ isOpen, onClose }) {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const API_BASE_URL = "http://localhost:9000/api/admin";
+  const API_BASE_URL = "https://csp-7ud9.onrender.com/api/admin";
 
   const handleAdminLogin = async (e) => {
     e.preventDefault();

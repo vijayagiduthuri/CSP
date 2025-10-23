@@ -26,7 +26,7 @@ export default function MyComplaintsPage() {
       }
 
       const response = await fetch(
-        `http://localhost:9000/api/complaints/user/${user.id}`
+        `https://csp-7ud9.onrender.com/api/complaints/user/${user.id}`
       );
 
       if (!response.ok) {

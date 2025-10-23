@@ -9,7 +9,7 @@ export default function AdminDashboard() {
   const [error, setError] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const API_BASE_URL = "http://localhost:9000/api/complaints";
+  const API_BASE_URL = "https://csp-7ud9.onrender.com/api/complaints";
 
   // Fetch all complaints
   const fetchAllComplaints = async () => {

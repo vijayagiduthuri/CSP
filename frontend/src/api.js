@@ -1,6 +1,6 @@
 import axios from "axios";
 const API = axios.create({
-  baseURL: "http://localhost:9000/api",
+  baseURL: "https://csp-7ud9.onrender.com/api",
 });
 // Attach token helper for admin endpoints if needed
 export const setAuthToken = (token) => {
