@@ -24,7 +24,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173"], // add your frontend URL
+  origin: ["https://csp-murex.vercel.app"], // add your frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
