@@ -2,9 +2,6 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./config/db.js";
-// Clerk integration removed temporarily to avoid import/runtime issues.
-// To re-enable Clerk, import `clerkClient` from '@clerk/clerk-sdk-node' and the
-// middleware from '@clerk/express' per the package docs and add the protected route back.
 import adminRoutes from "./routes/adminRoutes.js";
 import complaintRoutes from "./routes/complaintRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
@@ -26,11 +23,13 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 // Middleware
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: ["http://localhost:5173"], // add your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
-// NOTE: Clerk-protected user endpoint removed for now. Re-add after verifying
-// the correct middleware export name from @clerk/express.
+app.use(express.json());
 
 app.use("/api/admin", adminRoutes);
 app.use("/api/complaints", complaintRoutes);
